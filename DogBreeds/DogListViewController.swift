@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DogListViewController: UIViewController {
 
+    let dogStore = DogsStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        dogStore.loadDogs { dogs in
+            DispatchQueue.main.async {
+                debugPrint(dogs)
+            }
+        }
     }
-
 
 }
 

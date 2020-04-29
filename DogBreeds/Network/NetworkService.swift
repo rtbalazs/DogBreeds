@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit // for image download
+import UIKit // For image download.
 
 typealias DataTaskCompletionHandler = (Result<(URLResponse, Data), NSError>) -> Void
 

@@ -30,3 +30,20 @@ extension Dog: Codable {
         height = try container.decode(Int.self, forKey: .height)
     }
 }
+
+extension Dog: Equatable {
+    static func == (lhs: Dog, rhs: Dog) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+// TODO: Revisit, as we take only the first breed into consideration
+extension Dog {
+    var breedLifeSpan: String? {
+        return breeds.first?.lifeSpan
+    }
+    
+    var breedLifeSpanRange: Range<Int> {
+        return breeds.first?.lifeSpanRange ?? 0..<0
+    }
+}

@@ -95,18 +95,14 @@
 			children = (
 				0298D9C624591F0400662853 /* AppDelegate.swift */,
 				0298D9C824591F0400662853 /* SceneDelegate.swift */,
-				0298D9CA24591F0400662853 /* DogListViewController.swift */,
-				02D81FCF24593E0F00485CA2 /* DogsViewModel.swift */,
+				02D81FD8245992F800485CA2 /* Network */,
+				02D81FD5245992AB00485CA2 /* Model */,
+				02D81FD6245992C700485CA2 /* ViewModel */,
+				02D81FD7245992E000485CA2 /* View */,
 				0298D9CC24591F0400662853 /* Main.storyboard */,
-				02D81FD324594D0200485CA2 /* DogCell.swift */,
 				0298D9CF24591F0400662853 /* Assets.xcassets */,
 				0298D9D124591F0400662853 /* LaunchScreen.storyboard */,
 				0298D9D424591F0400662853 /* Info.plist */,
-				0298D9E8245923E200662853 /* Dog.swift */,
-				0298D9EA2459240800662853 /* Breed.swift */,
-				0298D9EE24592C5D00662853 /* NetworkService.swift */,
-				02D81FCD245934E300485CA2 /* DogStore.swift */,
-				02D81FD1245943D300485CA2 /* ImageDownloader.swift */,
 			);
 			path = DogBreeds;
 			sourceTree = "<group>";
@@ -118,6 +114,42 @@
 				0298D9DF24591F0500662853 /* Info.plist */,
 			);
 			path = DogBreedsTests;
+			sourceTree = "<group>";
+		};
+		02D81FD5245992AB00485CA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0298D9EA2459240800662853 /* Breed.swift */,
+				0298D9E8245923E200662853 /* Dog.swift */,
+				02D81FCD245934E300485CA2 /* DogStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02D81FD6245992C700485CA2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02D81FCF24593E0F00485CA2 /* DogsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02D81FD7245992E000485CA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0298D9CA24591F0400662853 /* DogListViewController.swift */,
+				02D81FD324594D0200485CA2 /* DogCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		02D81FD8245992F800485CA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0298D9EE24592C5D00662853 /* NetworkService.swift */,
+				02D81FD1245943D300485CA2 /* ImageDownloader.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7RZKRL463;
 				INFOPLIST_FILE = DogBreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7RZKRL463;
 				INFOPLIST_FILE = DogBreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

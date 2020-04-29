@@ -19,4 +19,15 @@ struct DogsViewModel {
     func lifeSpan(of dog: Dog) -> String? {
         dog.breeds.first?.lifeSpan
     }
+    
+    mutating func sort(ascending: Bool){
+        dogs = dogs.sorted(by: { (first, second) -> Bool in
+            let first = first.breedLifeSpanRange
+            let second = second.breedLifeSpanRange
+            return ascending ?
+                first.upperBound < second.upperBound :
+                first.upperBound > second.upperBound
+        })
+    }
+
 }

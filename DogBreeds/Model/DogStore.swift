@@ -14,7 +14,7 @@ class DogsStore {
     }
     
     let dogService = NetworkService()
-    var dogs = [Dog]()
+    private (set) var dogs = [Dog]()
     
     func loadDogs(completion: @escaping ([Dog]) -> Void) {
         guard let url = URL(string: Constants.dogsApiUrl) else {

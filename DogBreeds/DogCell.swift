@@ -15,8 +15,8 @@ class DogCell: UITableViewCell {
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var detailsImageView: UIImageView!
     
+    // Idealy we would pass the a dog viewmodel into the configure in order pass all data needed. We keep it simple in this test.
     func configure(name: String?, details: String?, imageUrl: URL?) {
-        
         nameLabel.text = name ?? "Oops, Unamed dog"
         detailsLabel.text = details
         self.imageUrl = imageUrl
@@ -31,5 +31,10 @@ class DogCell: UITableViewCell {
         } else {
             detailsImageView.image = nil
         }
-    }    
+    }
+    
+    override func prepareForReuse() {
+        imageUrl = nil
+        detailsImageView.image = nil
+    }
 }

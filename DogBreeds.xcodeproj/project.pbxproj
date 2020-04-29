@@ -18,6 +18,9 @@
 		0298D9EB2459240800662853 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298D9EA2459240800662853 /* Breed.swift */; };
 		0298D9EF24592C5D00662853 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298D9EE24592C5D00662853 /* NetworkService.swift */; };
 		02D81FCE245934E300485CA2 /* DogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D81FCD245934E300485CA2 /* DogStore.swift */; };
+		02D81FD024593E0F00485CA2 /* DogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D81FCF24593E0F00485CA2 /* DogsViewModel.swift */; };
+		02D81FD2245943D300485CA2 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D81FD1245943D300485CA2 /* ImageDownloader.swift */; };
+		02D81FD424594D0200485CA2 /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D81FD324594D0200485CA2 /* DogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		0298D9EA2459240800662853 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		0298D9EE24592C5D00662853 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		02D81FCD245934E300485CA2 /* DogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogStore.swift; sourceTree = "<group>"; };
+		02D81FCF24593E0F00485CA2 /* DogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewModel.swift; sourceTree = "<group>"; };
+		02D81FD1245943D300485CA2 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		02D81FD324594D0200485CA2 /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +96,9 @@
 				0298D9C624591F0400662853 /* AppDelegate.swift */,
 				0298D9C824591F0400662853 /* SceneDelegate.swift */,
 				0298D9CA24591F0400662853 /* DogListViewController.swift */,
+				02D81FCF24593E0F00485CA2 /* DogsViewModel.swift */,
 				0298D9CC24591F0400662853 /* Main.storyboard */,
+				02D81FD324594D0200485CA2 /* DogCell.swift */,
 				0298D9CF24591F0400662853 /* Assets.xcassets */,
 				0298D9D124591F0400662853 /* LaunchScreen.storyboard */,
 				0298D9D424591F0400662853 /* Info.plist */,
@@ -98,6 +106,7 @@
 				0298D9EA2459240800662853 /* Breed.swift */,
 				0298D9EE24592C5D00662853 /* NetworkService.swift */,
 				02D81FCD245934E300485CA2 /* DogStore.swift */,
+				02D81FD1245943D300485CA2 /* ImageDownloader.swift */,
 			);
 			path = DogBreeds;
 			sourceTree = "<group>";
@@ -215,10 +224,13 @@
 				0298D9CB24591F0400662853 /* DogListViewController.swift in Sources */,
 				0298D9C724591F0400662853 /* AppDelegate.swift in Sources */,
 				0298D9E9245923E200662853 /* Dog.swift in Sources */,
+				02D81FD2245943D300485CA2 /* ImageDownloader.swift in Sources */,
 				0298D9EB2459240800662853 /* Breed.swift in Sources */,
 				02D81FCE245934E300485CA2 /* DogStore.swift in Sources */,
 				0298D9EF24592C5D00662853 /* NetworkService.swift in Sources */,
 				0298D9C924591F0400662853 /* SceneDelegate.swift in Sources */,
+				02D81FD424594D0200485CA2 /* DogCell.swift in Sources */,
+				02D81FD024593E0F00485CA2 /* DogsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

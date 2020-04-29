@@ -27,6 +27,7 @@ class DogsStore {
                     do  {
                         let dogs = try JSONDecoder().decode([Dog].self, from: data)
                         self.dogs = dogs
+                        completion(dogs)
                     } catch let error {
                         debugPrint(error)
                     }

@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import UIKit // for image download
 
 typealias DataTaskCompletionHandler = (Result<(URLResponse, Data), NSError>) -> Void
+
+public typealias ImageDownloadCompletionHandler = (Result<UIImage, NSError>) -> Void
 
 struct NetworkError {
     
     static let unknown = NSError(domain: "dogBreeds",
                                  code: 0,
                                  userInfo: [NSLocalizedDescriptionKey: "Response did not contain any data"])
+    static let imageCreation = NSError(domain: "dogBreeds",
+                                       code: 1,
+                                       userInfo: [NSLocalizedDescriptionKey: "Could not create image from reponse data"])
 }
 class NetworkService {
     
@@ -39,6 +45,20 @@ class NetworkService {
                 return
             }
             completion(.success((response, data)))
+        }
+        task.resume()
+    }
+    
+    func loadImage(at url: URL, completion: @escaping ImageDownloadCompletionHandler) {
+        let task = urlSession.dataTask(with: url) { (data, response, error) in
+            // Simplified error handling, as a complete imlementetion will require to look at response as well.
+            if error == nil {
+                if let data = data, let image = UIImage(data: data) {
+                    completion(.success(image))
+                }
+            } else {
+                completion(.failure(NetworkError.imageCreation))
+            }
         }
         task.resume()
     }
